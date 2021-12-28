@@ -3,16 +3,19 @@ package hello.hellospring;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import hello.hellospring.service.MemberService;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
-public class HelloSpringApplication {
+@Configuration
+public class SpringConfig {
 
-	public static void main(String[] args) {
-		SpringApplication.run(HelloSpringApplication.class, args);
-	}
+    @Bean
+    public MemberService memberService(){
+        return new MemberService(memberRepository());
+    }
 
+    @Bean
+    public MemberRepository memberRepository(){
+        return new MemoryMemberRepository();
+    }
 }
