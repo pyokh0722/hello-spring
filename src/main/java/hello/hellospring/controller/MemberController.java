@@ -26,5 +26,5 @@ public class MemberController {
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
-    // kihun 브렌치 추가
+    // 브렌치 추가
 }
