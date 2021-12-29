@@ -27,4 +27,5 @@ public class MemberController {
         this.memberService = memberService;
     }
     // 브렌치 추가
+    // test
 }
