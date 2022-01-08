@@ -34,7 +34,6 @@ class MemberServiceIntegrationTest {
 //    }
 
     @Test
-    @Commit
     void 회원가입() {
         // given
         Member member = new Member();
